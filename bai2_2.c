@@ -22,13 +22,48 @@
 #include <stdio.h>
 
 int main(){
-    
-    // Khai báo biến
 
 
-    // Nhập dữ liệu
+    double a, b, c;
+    printf("Nhap a: ");
+    scanf("%lf", &a);
+    printf("Nhap b: ");
+    scanf("%lf", &b);
+    printf("Nhap c: ");
+    scanf("%lf", &c);
 
+    // Trường hợp a = 0 => phương trình bậc 1
+    if (a == 0) {
+        if (b == 0) {
+            if (c == 0)
+                printf("Phuong trinh co vo so nghiem");
+            else
+                printf("Phuong trinh vo nghiem");
+        } else {
+            double x = -c / b;
+            printf("Phuong trinh co nghiem x = %lf", x);
+        }
+    }
+    // Trường hợp a != 0 => phương trình bậc 2
+    else {
+        double delta = b * b - 4 * a * c;
 
-    // Xử lý, tính toán VÀ Hiển thị kết quả
+        if (delta < 0) {
+            printf("Phuong trinh vo nghiem");
+        } else if (delta == 0) {
+            double x = -b / (2 * a);
+            printf("Phuong trinh co nghiem kep x = %lf", x);
+        } else {
+            double x1 = (-b + sqrt(delta)) / (2 * a);
+            double x2 = (-b - sqrt(delta)) / (2 * a);
+            printf("Phuong trinh co 2 nghiem phan biet:\n");
+            printf("x1 = %lf\n", x1);
+            printf("x2 = %lf\n", x2);
+            printf("x2 = %lf\n", x2);
+        }
+    }
 
+    return 0;
 }
+
+    
