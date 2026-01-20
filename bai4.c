@@ -45,6 +45,5 @@ int main(){
     // Nhập dữ liệu
 
 
-    // Xử lý, tính toán VÀ Hiển thị kết quả
 
 }
